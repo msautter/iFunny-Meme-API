@@ -14,7 +14,7 @@ homePage = 'https://ifunny.co/'
 response = urllib.request.urlopen(homePage)
 homePageHTML = response.read()
 response.close()
-homePageSOUP = soup(homePageHTML, "html5lib")
+homePageSOUP = soup(homePageHTML, "lxml")
 keyword = "/fun"
 
 # Find all memes on homepage
@@ -122,7 +122,7 @@ with open('iFunnyArchive.csv', mode='w') as trackWriter:
 # first two tags class="actionlink__text
 
 # User
-# first href="/user/LitLuther"
+# first href="/user/testUser"
 
 # Getting Type and sources
 # if data-type="video" get source video
